@@ -1,0 +1,16 @@
+name: Some workflow
+on: [push]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      - name: Say something
+        run: echo 'Some text'
+      - name: Say multiple things
+        run: |
+          echo 'First thing'
+          echo 'Second thing'
